@@ -5,7 +5,7 @@ LLVM 6.0 + Ollvm + Armariris
 mkdir -p /opt/ollvm/
 mkdir build
 cd build
-cmake  -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release --prefix=/opt/ollvm/  DLLVM_INCLUDE_TESTS=OFF ../
+cmake  -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release  -DCMAKE_INSTALL_PREFIX=/opt/ollvm/  DLLVM_INCLUDE_TESTS=OFF ../
 make -j8
 
 使用:

@@ -8,6 +8,9 @@ cd build
 cmake  -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release  -DCMAKE_INSTALL_PREFIX=/opt/ollvm/  DLLVM_INCLUDE_TESTS=OFF ../
 make -j8
 
+注意:aarc64下编译可能因无法判断大小端出错,在CMakeLists.txt中加上定义即可:
+add_definitions(-DENDIAN_LITTLE)
+
 使用:
 /opt/ollvm/bin/clang a.c -mllvm -fla  -mllvm -sobf  -mllvm -bcf  -o a
 
